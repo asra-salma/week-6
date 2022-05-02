@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>World population</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>World population over time</h1>
+      <h2>
+        Number of people (in millions) living on earth, the last 500 years
+      </h2>
+      <canvas id="myChart" width="1600" height="900"></canvas>
+      <hr />
+      <button onclick="showPopulationOver500()">
+        Population over last 500 years
+      </button>
+      <hr />
+      <button onclick="showPopulationin1500()">Population in year 1500</button>
+      <button onclick="showPopulationin1600()">Population in year 1600</button>
+      <button onclick="showPopulationin1700()">Population in year 1700</button>
+      <button onclick="showPopulationin1750()">Population in year 1750</button>
+      <button onclick="showPopulationin1800()">Population in year 1800</button>
+      <button onclick="showPopulationin1850()">Population in year 1850</button>
+      <button onclick="showPopulationin1900()">Population in year 1900</button>
+      <button onclick="showPopulationin1950()">Population in year 1950</button>
+      <button onclick="showPopulationin1999()">Population in year 1999</button>
+    </div>
+
+    <script>
+      // Our labels along the x-axis
+      var years = [1500, 1600, 1700, 1750, 1800, 1850, 1900, 1950, 1999, 2050];
+      // For drawing the lines
+      var africa = [86, 114, 106, 106, 107, 111, 133, 221, 783, 2478];
+      var asia = [282, 350, 411, 502, 635, 809, 947, 1402, 3700, 5267];
+      var europe = [168, 170, 178, 190, 203, 276, 408, 547, 675, 734];
+      var latinAmerica = [40, 20, 10, 16, 24, 38, 74, 167, 508, 784];
+      var northAmerica = [6, 3, 2, 2, 7, 26, 82, 172, 312, 433];
+
+      const ctx = document.getElementById("myChart").getContext("2d");
+      showPopulationOver500();
+      function showPopulationOver500() {
+        var myChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: years,
+            datasets: [
+              {
+                data: africa,
+                label: "Africa",
+                borderColor: "#3e95cd",
+                fill: false,
+              },
+              {
+                data: asia,
+                label: "Asia",
+                borderColor: "#3e95cd",
+                fill: false,
+              },
+              {
+                data: europe,
+                label: "Europe",
+                borderColor: "#3e95cd",
+                fill: false,
+              },
+              {
+                data: latinAmerica,
+                label: "Latin America",
+                borderColor: "#3e95cd",
+                fill: false,
+              },
+              {
+                data: northAmerica,
+                label: "North America",
+                borderColor: "#3e95cd",
+                fill: false,
+              },
+            ],
+          },
+        });
+      }
+
+      function showPopulationin1500() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1500",
+                data: [86, 282, 168, 40, 6],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      function showPopulationin1600() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1600",
+                data: [86, 282, 168, 40, 6],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      function showPopulationin1700() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1700",
+                data: [86, 282, 168, 40, 6],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      function showPopulationin1750() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1750",
+                data: [114, 350, 170, 20, 3],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      function showPopulationin1800() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1800",
+                data: [106, 411, 178, 10, 2],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      function showPopulationin1850() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1850",
+                data: [106, 502, 190, 16, 2],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      function showPopulationin1900() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1900",
+                data: [107, 635, 203, 24, 7],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      function showPopulationin1950() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1950",
+                data: [111, 809, 276, 38, 26],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      function showPopulationin1999() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1999",
+                data: [133, 947, 408, 74, 82],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+      function showPopulationin1999() {
+        const myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Africa",
+              "Asia",
+              "Europe",
+              "LatinAmerica",
+              "NorthAmerica",
+            ],
+            datasets: [
+              {
+                label: "Population in Year 1999",
+                data: [783, 3700, 675, 508, 312],
+                backgroundColor: [
+                  "rgba(255, 99, 132, 0.2)",
+                  "rgba(54, 162, 235, 0.2)",
+                  "rgba(255, 206, 86, 0.2)",
+                  "rgba(75, 192, 192, 0.2)",
+                  "rgba(153, 102, 255, 0.2)",
+                ],
+                borderColor: [
+                  "rgba(255, 99, 132, 1)",
+                  "rgba(54, 162, 235, 1)",
+                  "rgba(255, 206, 86, 1)",
+                  "rgba(75, 192, 192, 1)",
+                  "rgba(153, 102, 255, 1)",
+                ],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
